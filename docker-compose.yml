@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      # - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    volumes:
+      - './docker-volume:/bitnami'
+    ports:
+      - '6379:6379'

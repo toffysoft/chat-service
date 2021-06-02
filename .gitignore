@@ -1,5 +1,8 @@
 # Logs
-logs
+logs/*/**
+!logs/.gitkeep
+!logs/app/.gitkeep
+!logs/worker/.gitkeep
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -102,3 +105,22 @@ dist
 
 # TernJS port file
 .tern-port
+
+docker-volume/redis/*
+!docker-volume/redis/.gitkeep
+docker-volume/mongo/*
+!docker-volume/mongo/.gitkeep
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+build
+cmd/poc/*.jpg
+cmd/poc/*.png
+tmp/*
+!tmp/.gitkeep
+.DS_Store
+
+docker-compose.uat.yml
